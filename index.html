@@ -516,6 +516,26 @@
         }
         /* --- END: Floating Action Button Styles --- */
 
+        /* --- Responsive YouTube Video Embed Styles --- */
+        .video-responsive-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
+            border-radius: 15px; /* Optional: adds rounded corners */
+            box-shadow: var(--shadow-navy); /* Optional: adds a nice shadow */
+        }
+
+        .video-responsive-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* --- END: Responsive YouTube Video Embed Styles --- */
+
+
         /* --- NEW: Desktop-Only CTA Styles --- */
         .cta-desktop-support {
             margin: 3rem auto; /* Adds vertical space and centers the block */
@@ -740,9 +760,25 @@
             </div>
         </div>
 
+        <!-- =================================================================== -->
+        <!-- ============= YOUTUBE VIDEO SECTION =========================== -->
+        <!-- =================================================================== -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title lang-content">How It Works</h2>
+
+                <!-- wrapper is essential for responsiveness -->
+                <div class="video-responsive-wrapper">
+                    <!-- iframe code from YouTube here -->
+                    <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/watch?v=Xwe8HR2P-GU&list=PLJSqcChSTA58bXP8qqd8l1fbKm4YYfGpw&index=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- =================================================================== -->
+        <!-- =================================================================== -->
+
          <div class="container">
         <div class="cta-desktop-support">
-            <!-- IMPORTANT: Replace the src with the actual path to your image -->
             <img id="ctaImage" src="./CTA-EN.png" alt="Call our support team for help" class="cta-image">
         </div>
     </div>
@@ -808,6 +844,7 @@
                 faqTitle: 'Frequently Asked Questions',
                 termsTitle: 'Terms & Conditions',
                 ctaImagePath: './CTA-EN.png',
+                youtubeVideoUrl: 'https://www.youtube.com/embed/Xwe8HR2P-GU?si=wyJA5LKMG-kaVCB3',
                 faqs: [
                     {
                         question: 'Who can avail this campaign?',
@@ -891,6 +928,7 @@
                 faqTitle: 'FAQ',
                 termsTitle: 'নিয়মাবলী ও শর্তাদি',
                 ctaImagePath: './CTA-BN.png',
+                youtubeVideoUrl: 'https://www.youtube.com/embed/THYTIGyVDjQ?si=kQZWPLY7zqUgmHfY',
                 faqs: [
                     {
                         question: 'এই ক্যাম্পেইনটি কারা উপভোগ করতে পারবেন?',
@@ -1019,7 +1057,8 @@
             document.getElementById('exampleText').textContent = lang.exampleText;
             document.getElementById('faqTitle').textContent = lang.faqTitle;
             document.getElementById('termsTitle').textContent = lang.termsTitle;
-             document.getElementById('ctaImage').src = lang.ctaImagePath;
+            document.getElementById('ctaImage').src = lang.ctaImagePath;
+            document.getElementById('youtubeVideo').src = lang.youtubeVideoUrl;
         }
 
         // Generate FAQ accordion
