@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Kinen AGS Cashback Campaign</title>
+    <title>Gold Kinen iPhone Jiten Campaign</title>
     <meta name="facebook-domain-verification" content="9jzjjsr3qwgtvk90zz38k47s8s19e5" />
     
     <!-- Meta Pixel Code -->
@@ -172,7 +172,6 @@
             width: 100%;
             height: 100vh;
             display: flex;
-            /* align-items: flex-end; */
             justify-content: center;
             text-align: center;
             overflow: hidden;
@@ -198,18 +197,6 @@
             color: #020225;
         }
         
-        .campaign-period {
-            display: inline-block;
-            background: rgba(233, 190, 90, 0.15);
-            border: 2px solid var(--primary-gold);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            animation: pulse 2s infinite;
-            backdrop-filter: blur(5px);
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -248,6 +235,14 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: -2rem auto 3rem;
+        }
 
         .info-block {
             background: rgba(227, 229, 233, 0.6);
@@ -264,7 +259,6 @@
         }
 
         .info-block::before {
-            /* solid finger point unicode */
             content:  '\f0a4';
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
@@ -290,12 +284,20 @@
             position: relative;
             overflow: hidden;
             border-color: var(--primary-gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-light);
             border-color: var(--primary-gold);
+        }
+        
+        .prize-card {
+             border-width: 2px;
         }
 
         .feature-icon {
@@ -315,6 +317,22 @@
         .feature-description {
             color: var(--text-secondary);
             line-height: 1.6;
+        }
+        
+        .prize-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .prize-description {
+             font-size: 1.1rem;
+             font-weight: 500;
+             margin-bottom: 1rem;
+        }
+        
+        .prize-sub-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
 
         /* Highlight Box */
@@ -429,7 +447,7 @@
         }
         
         .accordion-item.active .accordion-content {
-            max-height: 300px;
+            max-height: 500px; /* Increased max-height for longer FAQ answers */
             padding: 0 1.5rem 1.5rem 1.5rem;
         }
 
@@ -471,7 +489,6 @@
         }
 
         .terms-number {
-            /* color: var(--primary-gold); */
             font-weight: 500;
             margin-right: 0.5rem;
         }
@@ -594,7 +611,6 @@
             padding: 1rem 0.5rem;
             
         }
-            .campaign-period { font-size: 0.7rem; padding: 0.25rem 1.5rem; }
             .nav-container { padding: 0 1rem; }
             .container { padding: 0 1rem; }
             .feature-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -611,16 +627,7 @@
                 right: 20px;
             }
         }
-        /* @media (max-width: 414px) {
-            .main-banner {
-            height: 30vh;
-        }
-        .banner-bg-img {
-            top: 0;
-            height: 32vh;
-            object-fit: contain;
-        }
-        } */
+
         @media (max-width: 390px) {
             
             .main-banner {
@@ -670,122 +677,88 @@
     <!-- Main Banner -->
     <section class="main-banner">
         <img src="./Website-Banner.jpg" alt="Campaign Banner" class="banner-bg-img">
-        <!-- <div class="banner-content">
-            <div class="campaign-period lang-content" id="campaignPeriod">
-                <i class="fas fa-calendar-alt"></i>
-                3 September – 3 October 2025
-            </div>
-        </div> -->
     </section>
 
     <!-- Campaign Details -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title lang-content" id="detailsTitle">Campaign Details</h2>
+            <h2 class="section-title lang-content" id="campaignTitle">Gold Kinen iPhone Jiten</h2>
+            <p class="section-subtitle lang-content" id="campaignSubtitle">
+               From 1-31 October 2025, the 3 highest gold purchasing users on the Gold Kinen app will win the latest iPhones!
+            </p>
             
-            <!-- Eligibility Section -->
-            <div class="info-block">
-                <p class="feature-description eligibility-desc lang-content" id="eligibilityDesc">
-                    Any Gold Kinen user who opens a new Auto Gold Save (AGS) plan with a 3-month tenure and completes the first payment within the campaign period.
-                </p>
+            <!-- Prize Section -->
+             <h2 class="section-title lang-content" id="prizeTitle">Prizes to Be Won</h2>
+            <div class="feature-grid">
+                <!-- 1st Prize -->
+                <div class="feature-card prize-card">
+                    <i class="fas fa-trophy feature-icon"></i>
+                    <h3 class="feature-title lang-content" id="prize1stPlace">1st Place</h3>
+                    <p class="prize-description lang-content" id="prize1Name">iPhone 17 Pro [256GB]</p>
+                    <p class="prize-sub-description lang-content" id="prize1details"></p>
+                </div>
+                <!-- 2nd Prize -->
+                <div class="feature-card prize-card">
+                    <i class="fas fa-medal feature-icon"></i>
+                    <h3 class="feature-title lang-content" id="prize2ndPlace">2nd Place</h3>
+                    <p class="prize-description lang-content" id="prize2Name">iPhone Air [256GB]</p>
+                    <p class="prize-sub-description lang-content" id="prize2details"></p>
+                </div>
+                <!-- 3rd Prize -->
+                <div class="feature-card prize-card">
+                     <i class="fas fa-award feature-icon"></i>
+                    <h3 class="feature-title lang-content" id="prize3rdPlace">3rd Place</h3>
+                    <p class="prize-description lang-content" id="prize3Name">iPhone 17 [256GB]</p>
+                    <p class="prize-sub-description lang-content" id="prize3details"></p>
+                </div>
             </div>
 
-
+            <!-- How to Participate & Eligibility -->
             <div class="feature-grid">
                 <div class="feature-card">
-                    <i class="fas fa-percentage feature-icon"></i>
-                    <h3 class="feature-title lang-content" id="cashbackTitle">5% Cashback</h3>
-                    <p class="feature-description lang-content" id="cashbackDesc">
-                        Users will receive 5% cashback on each successful AGS installment. Cashback is capped at BDT 1000 per plan per month.
+                    <i class="fas fa-bullseye feature-icon"></i>
+                    <h3 class="feature-title lang-content" id="howToTitle">How to Participate</h3>
+                    <p class="feature-description lang-content" id="howToDesc">
+                       Simply buy gold using the Gold Kinen app between 1-31 October 2025. Every successful purchase automatically counts towards the campaign.
                     </p>
                 </div>
                 
                 <div class="feature-card">
-                    <i class="fas fa-coins feature-icon"></i>
-                    <h3 class="feature-title lang-content" id="maxCashbackTitle">Maximum Cashback</h3>
-                    <p class="feature-description lang-content" id="maxCashbackDesc">
-                        Maximum cashback per plan = BDT 3000 over 3 months.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <i class="fas fa-calendar-check feature-icon"></i>
-                    <h3 class="feature-title lang-content" id="tenureTitle">Tenure Requirement</h3>
-                    <p class="feature-description lang-content" id="tenureDesc">
-                        Only 3-month tenured AGS plans are eligible. Plans must be opened and activated within 3 September – 3 October 2025.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <i class="fas fa-ban feature-icon"></i>
-                    <h3 class="feature-title lang-content" id="exclusionsTitle">Exclusions</h3>
-                    <p class="feature-description lang-content" id="exclusionsDesc">
-                        Existing AGS plans are not eligible. Plans opened during the campaign but without at least one successful payment within the campaign period will not qualify.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <i class="fas fa-layer-group feature-icon"></i>
-                    <h3 class="feature-title lang-content" id="multiplePlansTitle">Multiple Plans</h3>
-                    <p class="feature-description lang-content" id="multiplePlansDesc">
-                        Users may open multiple AGS plans. Each plan will independently qualify for cashback, subject to the BDT 1000 monthly cap.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <i class="fas fa-exclamation-triangle feature-icon"></i>
-                    <h3 class="feature-title lang-content" id="paymentFailureTitle">Payment Failure</h3>
-                    <p class="feature-description lang-content" id="paymentFailureDesc">
-                        If any bKash Auto Payment fails for a plan during the campaign period, cashback will not be provided for that month.
+                    <i class="fas fa-user-check feature-icon"></i>
+                    <h3 class="feature-title lang-content" id="eligibilityTitle">Eligibility</h3>
+                    <p class="feature-description lang-content" id="eligibilityDesc">
+                        All Gold Kinen app users are eligible. Winners are determined by the highest total gold purchase volume (in grams) during the campaign period.
                     </p>
                 </div>
             </div>
 
-            <!-- Cashback Disbursement -->
-            <div class="feature-card" style="margin-bottom: 2rem;">
-            <i class="fas fa-money-bill-transfer feature-icon"></i>
-            <h3 class="feature-title lang-content" id="disbursementTitle">Cashback Disbursement</h3>
-            <p class="feature-description lang-content" id="disbursementDesc">
-                Cashback will be deposited into the bKash account linked with the AGS plan. Disbursement will occur on the next business day after each successful payment.
-            </p>
-        </div>
-
-            <!-- Example Section -->
+            <!-- Winner Selection -->
             <div class="highlight-box">
                 <div class="highlight-content">
-                    <h3 class="highlight-title lang-content" id="exampleTitle">Example</h3>
-                    <p class="highlight-text lang-content" id="exampleText">
-                        If a user opens a BDT 20,000 worth Auto Gold Save plan; upon first payment the user will be eligible for a 5% cashback, up to BDT 1000 per plan per month. Therefore, 5% of BDT 20,000 is BDT 1000 (maximum cashback limit). Over a period of 3 months, a user will be eligible for a maximum of BDT 3000 cashback upon each successful AGS payment.
+                    <h3 class="highlight-title lang-content" id="winnerSelectionTitle">Winner Selection</h3>
+                    <p class="highlight-text lang-content" id="winnerSelectionDesc">
+                        The top 3 users with the highest total grams of gold purchased (from single or multiple transactions) between 1-31 October 2025 will be selected. In case of a tie, the user who reached the volume earlier will win.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- =================================================================== -->
-        <!-- ============= YOUTUBE VIDEO SECTION =========================== -->
-        <!-- =================================================================== -->
+        <!-- YOUTUBE VIDEO SECTION -->
         <section class="content-section">
             <div class="container">
-                <h2 class="section-title lang-content" id="howItWorksTitle">How to Start Auto Gold Save Plan</h2>
-
-                <!-- wrapper is essential for responsiveness -->
+                <h2 class="section-title lang-content" id="howItWorksTitle">Learn About Buying Gold</h2>
                 <div class="video-responsive-wrapper">
-                    <!-- iframe code from YouTube here -->
                     <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/watch?v=Xwe8HR2P-GU&list=PLJSqcChSTA58bXP8qqd8l1fbKm4YYfGpw&index=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
-        <!-- =================================================================== -->
-        <!-- =================================================================== -->
 
          <div class="container">
-        <div class="cta-desktop-support">
-            <img id="ctaImage" src="./CTA-EN.png" alt="Call our support team for help" class="cta-image">
+            <div class="cta-desktop-support">
+                <img id="ctaImage" src="./CTA-EN.png" alt="Call our support team for help" class="cta-image">
+            </div>
         </div>
-    </div>
     </section>
-
-    
 
     <!-- Terms & Conditions -->
     <section class="terms-section">
@@ -810,186 +783,200 @@
         </div>
     </section>
 
-     <!-- Floating Action Button HTML --- -->
+     <!-- Floating Action Button HTML -->
     <a id="contact-fab" class="contact-fab" href="#">
         <i id="fab-icon" class="fab-icon"></i>
     </a>
-    <!--  Floating Action Button HTML --- -->
 
     <script>
         // Language data
         const translations = {
             en: {
                 langText: 'বাংলা',
-                bannerTitle: 'AGS Cashback Campaign',
-                bannerSubtitle: 'Get 5% cashback on your Auto Gold Save investments',
-                campaignPeriod: '3 September – 3 October 2025',
-                detailsTitle: 'Campaign Details',
-                eligibilityDesc: 'From September 3rd to October 3rd, 2025, Gold Kinen app users opening a 3-month tenured Auto Gold Save plan can enjoy 5% cashback in their linked bKash account on the next business day.',
-                cashbackTitle: '5% Cashback',
-                cashbackDesc: 'Users will receive 5% cashback on each successful AGS payment, up to BDT 1000 per plan per month.',
-                maxCashbackTitle: 'Maximum Cashback',
-                maxCashbackDesc: 'Maximum cashback per plan is BDT 3000 over 3 months.',
-                tenureTitle: 'Tenure Requirement',
-                tenureDesc: 'Only 3-month tenured AGS plans are eligible. Plans must be opened and first successful payment to be completed within September 3rd to October 3rd 2025.',
-                exclusionsTitle: 'Exclusions',
-                exclusionsDesc: 'Existing AGS plans are not eligible. Plans opened during the campaign but without at least one successful payment within the campaign period will not qualify.',
-                multiplePlansTitle: 'Multiple Plans',
-                multiplePlansDesc: 'Users may open multiple AGS plans. Each plan will independently qualify for cashback, up to BDT 1000 per plan per month.',
-                paymentFailureTitle: 'Payment Failure',
-                paymentFailureDesc: 'If any bKash Auto Payment fails for a plan during the campaign period, cashback will not be provided for that month.',
-                disbursementTitle: 'Cashback Disbursement',
-                disbursementDesc: 'Cashback will be deposited into the bKash account linked with the AGS plan. Disbursement will occur on the next business day after each successful payment.',
-                exampleTitle: 'Example',
-                exampleText: 'If a user opens a BDT 20,000 worth Auto Gold Save plan; upon first payment the user will be eligible for a 5% cashback, up to BDT 1000 per plan per month. Therefore, 5% of BDT 20,000 is BDT 1000 (maximum cashback limit). Over a period of 3 months, a user will be eligible for a maximum of BDT 3000 cashback upon each successful AGS payment.',
-                faqTitle: 'Frequently Asked Questions',
+                campaignTitle: 'Gold Kinen iPhone Jiten',
+                campaignSubtitle: 'From 1-31 October 2025, the 3 highest gold purchasing users on the Gold Kinen app will win the latest iPhones!',
+                prizeTitle: 'Prizes to Be Won',
+                prize1stPlace: '1st Place',
+                prize1Name: 'iPhone 17 Pro [256GB]',
+                prize1details: 'For the highest purchaser. Singapore/Australian variant (Dual SIM: e-SIM + physical SIM).',
+                prize2ndPlace: '2nd Place',
+                prize2Name: 'iPhone Air [256GB]',
+                prize2details: 'For the 2nd highest purchaser. Singapore/Australian variant (e-SIM).',
+                prize3rdPlace: '3rd Place',
+                prize3Name: 'iPhone 17 [256GB]',
+                prize3details: 'For the 3rd highest purchaser. Singapore/Australian variant (Dual SIM: e-SIM + physical SIM).',
+                howToTitle: 'How to Participate',
+                howToDesc: 'Simply buy gold using the Gold Kinen app between 1-31 October 2025 (from 10:00 AM to 11:59 PM). Every successful purchase automatically counts towards the campaign.',
+                eligibilityTitle: 'Eligibility',
+                eligibilityDesc: 'All Gold Kinen app users are eligible. Winners are determined by the highest total gold purchase volume (in grams) during the campaign period.',
+                winnerSelectionTitle: 'Winner Selection',
+                winnerSelectionDesc: 'The top 3 users with the highest total grams of gold purchased (from single or multiple transactions) between 1-31 October 2025 will be selected. In case of a tie, the user who reached the volume earlier (by date and time) will win.',
+                howItWorksTitle: 'Learn About Buying Gold',
                 termsTitle: 'Terms & Conditions',
+                faqTitle: 'Frequently Asked Questions',
                 ctaImagePath: './CTA-EN.png',
-                youtubeVideoUrl: 'https://www.youtube.com/embed/Xwe8HR2P-GU?si=wyJA5LKMG-kaVCB3',
-                howItWorksTitle: 'How to Start Auto Gold Save Plan',
+                youtubeVideoUrl: 'https://www.youtube.com/embed/gEgnyfRfGEU?si=DBETzEOu_CY63o4l',
                 faqs: [
                     {
-                        question: 'Who can avail this campaign?',
-                        answer: 'Any Gold Kinen user can avail this campaign by opening a new Auto Gold Save (AGS) plan with a 3-month tenure and completing the first payment between 3 September – 3 October 2025.'
+                        question: 'Who can participate in this campaign?',
+                        answer: 'Any registered Gold Kinen app user who purchases gold through the app between 1-31 October 2025.'
                     },
                     {
-                        question: 'What is the cashback offer?',
-                        answer: 'All Gold Kinen users who start a 3-month tenured AGS plan, from 3 September – 3 October 2025, will receive 5% cashback on each AGS payment (maximum BDT 1000 per plan) for 3 consecutive months.'
+                        question: 'How will the winners be selected?',
+                        answer: 'The winners will be selected based on the total cumulative amount of gold purchased (in grams) during the entire campaign period, 1-31 October 2025.'
                     },
                     {
-                        question: 'When will I receive the cashback?',
-                        answer: 'The cashback will be deposited into your bKash account linked to your AGS plan on the next business day after every successful payment.'
+                        question: 'What are the specifications of the rewards of the campaign?',
+                        answer: 'iPhone 17 Pro, 256 GB, Singapore/Australian variant (Dual SIM: e-SIM + physical SIM).<br>iPhone Air, 256 GB, Singapore/Australian variant (e-SIM).<br>iPhone 17, 256 GB, Singapore/Australian variant (Dual SIM: e-SIM + physical SIM).'
+                    },
+                     {
+                        question: 'Will the prizes have a warranty?',
+                        answer: 'Yes. Each iPhone will include a 1-year international warranty provided by Apple. Please note:<br>- Gold Kinen will not provide after-sales service, repair, or replacement.<br>- Winners must directly contact Apple-authorized service providers for warranty claims.<br>- Gold Kinen’s responsibility ends once the prize is officially handed over at the ceremony.'
                     },
                     {
-                        question: 'Is there a maximum cashback limit?',
-                        answer: 'Yes. A user can receive up to BDT 1000 cashback on each successful payment per plan, for 3 months. The maximum total cashback per plan is BDT 3000.'
+                        question: 'What happens if two customers purchase the same volume of gold?',
+                        answer: 'In case of a tie, the customer who reached that purchase volume earlier (by date and time) will be considered the winner.'
                     },
                     {
-                        question: 'Do I need to select a specific AGS tenure?',
-                        answer: 'Yes. To avail the cashback, you must open and complete payment of a new 3-month tenured AGS plan within 3 September - 3 October 2025.'
+                        question: 'Is there a minimum gold purchase requirement?',
+                        answer: 'Yes. The minimum purchase amount is BDT 500. However, buying a high amount of gold will increase users’ chance of winning.'
                     },
                     {
-                        question: 'Will I get cashback if I already have an AGS plan?',
-                        answer: 'No. This offer is valid only for new AGS plans opened during the campaign period.'
+                        question: 'When will the winners be announced?',
+                        answer: 'Approximately within 7 days after the end of the campaign.'
                     },
                     {
-                        question: 'What happens if my AGS installment payment fails?',
-                        answer: 'If your bKash Auto Payment fails for your new AGS plan between 3 September – 3 October 2025, you will not be eligible to receive cashback for the campaign.'
+                        question: 'How will winners be notified?',
+                        answer: 'Winners will be notified through an in-app notification and a phone call from Gold Kinen’s official Customer Service number 09610964653.'
                     },
                     {
-                        question: 'What if I open an AGS plan between 3 September - 3 October, 2025 but my first payment is due after 3 October?',
-                        answer: 'Only AGS plans that are opened and have at least one successful payment from 3 September-3 October 2025 will be eligible for the cashback offer.'
+                        question: 'How will the prizes be delivered?',
+                        answer: 'Prizes will be handed over in a prize-giving ceremony at a designated location and date (to be announced later).'
                     },
                     {
-                        question: 'How will the cashback appear in my bKash account?',
-                        answer: 'The cashback will be shown as a direct deposit in your bKash transaction history.'
+                        question: 'Can I win more than one prize?',
+                        answer: 'No. Each customer is eligible to win only one prize.'
+                    },
+                    {
+                        question: 'Is there any reason why a user may be ineligible to receive a prize in this campaign?',
+                        answer: 'Any customer involved in any kind of fraudulent activity in the app or abusing the app’s platform in any way may be considered ineligible for any reward in the campaign.'
+                    },
+                    {
+                        question: 'Where can I contact for assistance?',
+                        answer: 'For any kind of assistance, customers can call Gold Kinen\'s Customer Service number 09610964653 between 10:00 AM to 10:00 PM everyday.'
                     }
                 ],
                 terms: [
-                    'This campaign is valid from 3 September to 3 October, 2025.',
-                    'The offer is only applicable for new Auto Gold Save (AGS) plans of 3-month tenure, which are opened and first successful payment is completed within the campaign period.',
-                    'To be eligible for cashback, customers must select and complete first payment of a 3-month tenured AGS plan during the campaign period.',
-                    'Cashback applies to the bought gold amount only (not charges).',
-                    'Only AGS plans that have at least one successful payment within the campaign period will be eligible for cashback.',
-                    'Customers will receive 5% cashback per AGS payment, up to BDT 1000 per plan per month.',
-                    'Cashback is applicable for 3 consecutive months from the date of the first successful payment under the eligible AGS plan.',
-                    'The maximum cashback limit per plan is BDT 3000 (BDT 1000 per month × 3 months).',
-                    'Cashback will be deposited to the linked bKash account on the next business day after each successful payment.',
-                    'If an AGS payment fails, the cashback for that month will not be awarded.',
-                    'Customers may open multiple AGS plans and receive cashback on each, subject to the plan\'s tenure, monthly and per-plan cashback limits.',
-                    'This offer is not applicable for existing AGS plans opened before the campaign period.',
-                    'Gold Kinen reserves the right to amend, suspend, or cancel the campaign at any time without prior notice.',
+                    'The campaign will run from 1-31 October 2025, daily from 10:00 AM to 11:59 PM.',
+                    'Only purchases made using the Gold Kinen app during this period are eligible.',
+                    'Winners will be determined by the total gold purchase volume (grams) within the campaign period.',
+                    'In the event of a tie, the customer who reached the purchase volume earlier (date and time) will be declared the winner.',
+                    'The top 3 winners will receive the prizes as follows: 1st → iPhone 17 Pro [256GB], 2nd → iPhone Air [256GB], 3rd → iPhone 17 [256GB].',
+                    'Warranty & Limitations: All iPhones are Singapore/Australian variants. Each iPhone comes with a 1-year international warranty provided by Apple. Gold Kinen will not be responsible for: regional limitations of warranty/service coverage, any after-sales service, replacement, or repair. Winners must contact Apple-authorized service providers for any warranty claims.',
+                    'Each customer may only win one prize.',
+                    'Winners will be contacted via in-app notification and a phone call from Gold Kinen’s official Customer Service number 09610964653 within approximately 7 days after the campaign ends.',
+                    'If a winner cannot be contacted within 48 hours, Gold Kinen reserves the right to disqualify them.',
+                    'Prizes will be awarded in a prize-giving ceremony at a designated location/date, to be announced later.',
+                    'Gold Kinen’s responsibility ends after the official reward handover ceremony.',
+                    'By participating, winners agree that their name, photo, and prize details may be used in promotional materials.',
                     'In case of fraudulent activity, misuse, or breach of terms, Gold Kinen reserves the right to disqualify any customer.',
-                    'All disputes will be resolved under the laws of Bangladesh, and Gold Kinen\'s decision will be final and binding.'
+                    'Employees of Gold Kinen and their immediate family members are not eligible.',
+                    'Gold Kinen reserves the right to amend the campaign at any time without prior notice.',
+                    'All disputes are subject to the laws of Bangladesh and Gold Kinen’s decision will be final and binding.'
                 ]
             },
             bn: {
                 langText: 'English',
-                bannerTitle: 'AGS ক্যাশব্যাক ক্যাম্পেইন',
-                bannerSubtitle: 'আপনার অটো গোল্ড সেভ বিনিয়োগে ৫% ক্যাশব্যাক পান',
-                campaignPeriod: '৩ সেপ্টেম্বর – ৩ অক্টোবর ২০২৫',
-                detailsTitle: 'ক্যাম্পেইনের বিবরণ',
+                campaignTitle: 'Gold Kinen iPhone Jiten',
+                campaignSubtitle: '১-৩১ অক্টোবর ২০২৫ তারিখের মধ্যে গোল্ড কিনেন অ্যাপে ৩ জন সর্বোচ্চ পরিমাণ গোল্ড ক্রয়কারী গ্রাহক জিতবেন লেটেস্ট আইফোন।',
+                prizeTitle: 'পুরস্কারসমূহ',
+                prize1stPlace: '১ম স্থান',
+                prize1Name: 'iPhone 17 Pro [256GB]',
+                prize1details: 'সর্বোচ্চ ক্রয়কারী। Singapore/Australian variant (ডুয়াল সিম: e-SIM + Nano সিম)।',
+                prize2ndPlace: '২য় স্থান',
+                prize2Name: 'iPhone Air [256GB]',
+                prize2details: 'দ্বিতীয় সর্বোচ্চ ক্রয়কারী। Singapore/Australian variant (e-SIM)।',
+                prize3rdPlace: '৩য় স্থান',
+                prize3Name: 'iPhone 17 [256GB]',
+                prize3details: 'তৃতীয় সর্বোচ্চ ক্রয়কারী। Singapore/Australian variant (ডুয়াল সিম: e-SIM + Nano সিম)।',
+                howToTitle: 'কীভাবে অংশ নেবেন',
+                howToDesc: 'শুধুমাত্র ১-৩১ অক্টোবর ২০২৫ তারিখের মধ্যে (প্রতিদিন সকাল ১০:০০টা থেকে রাত ১১:৫৯টা পর্যন্ত) গোল্ড কিনেন অ্যাপ ব্যবহার করে গোল্ড ক্রয় করুন। প্রতিটি সফল ক্রয় স্বয়ংক্রিয়ভাবে ক্যাম্পেইনের জন্য গণনা করা হবে।',
                 eligibilityTitle: 'যোগ্যতা',
-                eligibilityDesc: '৩রা সেপ্টেম্বর থেকে ৩রা অক্টোবর ২০২৫ পর্যন্ত, গোল্ড কিনেন অ্যাপের সকল গ্রাহক ৩ মাস মেয়াদী অটো গোল্ড সেভ প্ল্যান শুরু করে পেমেন্ট সম্পন্ন করলে, পরবর্তী কার্যদিবসে তাদের লিংক করা বিকাশ অ্যাকাউন্টে ৫% ক্যাশব্যাক উপভোগ করবেন।',
-                cashbackTitle: '৫% ক্যাশব্যাক',
-                cashbackDesc: 'প্রতিটি সফল পেমেন্ট পরিশোধে ৫% ক্যাশব্যাক প্রতি প্ল্যান প্রতি মাসে, সর্বোচ্চে ১০০০ টাকা পর্যন্ত।',
-                maxCashbackTitle: 'সর্বোচ্চ ক্যাশব্যাক',
-                maxCashbackDesc: 'প্রতিটি প্ল্যানে (৩ মাসব্যাপী) সর্বোচ্চ ৩০০০ টাকা পর্যন্ত ক্যাশব্যাক পাওয়ার সুযোগ।',
-                tenureTitle: 'মেয়াদের শর্ত',
-                tenureDesc: 'শুধুমাত্র ৩ মাস মেয়াদের নতুন অটো গোল্ড সেভ প্ল্যান এই অফারের আওতাভুক্ত। ৩ সেপ্টেম্বর – ৩ অক্টোবর ২০২৫ এর মধ্যে নতুন অটো গোল্ড সেভ প্ল্যান খুলে এবং পেমেন্ট সম্পন্ন করে ক্যাশব্যাক উপভোগ করতে পারবেন গ্রাহক।',
-                exclusionsTitle: 'অব্যাহতি',
-                exclusionsDesc: 'পূর্বে খোলা অটো গোল্ড সেভ প্ল্যান এই অফারের আওতায় নয়। যে প্ল্যানগুলো ক্যাম্পেইন চলাকালীন খোলা হয়েছে কিন্তু অন্তত একটি সফল পেমেন্ট সম্পন্ন হয়নি, সেগুলো অযোগ্য।',
-                multiplePlansTitle: 'একাধিক প্ল্যান',
-                multiplePlansDesc: 'একজন ব্যবহারকারী একাধিক অটো গোল্ড সেভ প্ল্যান খুলতে পারবেন। প্রতিটি প্ল্যান আলাদাভাবে ক্যাশব্যাকের জন্য যোগ্য হবে, মাসিক ১০০০ টাকা সীমা সাপেক্ষে।',
-                paymentFailureTitle: 'পেমেন্ট ব্যর্থ হলে',
-                paymentFailureDesc: 'ক্যাম্পেইন চলাকালীন যদি কোনো প্ল্যানের বিকাশ অটো পেমেন্ট ব্যর্থ হয়, তবে সেই মাসের জন্য ক্যাশব্যাক পাওয়া যাবে না।',
-                disbursementTitle: 'ক্যাশব্যাক প্রদান',
-                disbursementDesc: 'ক্যাশব্যাক ব্যবহারকারীর অটো গোল্ড সেভ প্ল্যানের সাথে লিংক করা বিকাশ অ্যাকাউন্টে জমা হবে। প্রতিটি সফল পেমেন্টের পরবর্তী কর্মদিবসে ক্যাশব্যাক প্রদান করা হবে।',
-                exampleTitle: 'উদাহরণ',
-                exampleText: 'যদি কোন গ্রাহক ২০,০০০ টাকার একটি অটো গোল্ড সেভ প্ল্যান শুরু করেন; তাহলে প্রথম সফল পেমেন্টের উপর গ্রাহক ৫% ক্যাশব্যাক পাওয়ার যোগ্য, প্রতি প্ল্যান প্রতি মাসে। অতএব, ২০,০০০ টাকার ৫% হল ১০০০ টাকা (সর্বোচ্চ ক্যাশব্যাক লিমিট)। ৩ মাস ধরে প্রতিটি সফল অটো গোল্ড সেভ পেমেন্টের উপর গ্রাহক সর্বোচ্চ ৩০০০ টাকা পাওয়ার যোগ্য হবেন।',
-                faqTitle: 'FAQ',
+                eligibilityDesc: 'গোল্ড কিনেন অ্যাপের সকল ব্যবহারকারীই যোগ্য। ক্যাম্পেইনের সময়কালে সর্বোচ্চ মোট গোল্ড ক্রয়ের পরিমাণ (গ্রামে) অনুযায়ী বিজয়ী নির্ধারণ করা হবে।',
+                winnerSelectionTitle: 'বিজয়ী নির্বাচন',
+                winnerSelectionDesc: '১-৩১ অক্টোবর ২০২৫-এর মধ্যে সর্বোচ্চ মোট গ্রাম গোল্ড ক্রয়কারী (একক বা একাধিক লেনদেন থেকে) শীর্ষ ৩ জন ব্যবহারকারীকে নির্বাচিত করা হবে। যদি ক্রয়ের পরিমাণ সমান হয়, তবে যে ব্যবহারকারী আগে সেই পরিমাণে পৌঁছেছেন তিনি জিতবেন।',
+                howItWorksTitle: 'গোল্ড ক্রয় সম্পর্কে জানুন',
                 termsTitle: 'নিয়মাবলী ও শর্তাদি',
+                faqTitle: 'সাধারণ জিজ্ঞাসা',
                 ctaImagePath: './CTA-BN.png',
-                youtubeVideoUrl: 'https://www.youtube.com/embed/THYTIGyVDjQ?si=kQZWPLY7zqUgmHfY',
-                howItWorksTitle: 'কিভাবে অটো গোল্ড সেভ প্ল্যান করবেন',
+                youtubeVideoUrl: 'https://www.youtube.com/embed/6iZGg_24HEE?si=OpmHPmwPm4rhnMOa',
                 faqs: [
                     {
-                        question: 'এই ক্যাম্পেইনটি কারা উপভোগ করতে পারবেন?',
-                        answer: 'যেকোনো গোল্ড কিনেন গ্রাহক ৩ মাস মেয়াদের একটি নতুন অটো গোল্ড সেভ প্ল্যান খুলে ৩ সেপ্টেম্বর থেকে ৩ অক্টোবর ২০২৫ সালের মধ্যে প্রথম পেমেন্ট সম্পন্ন করলেই এই অফারটি উপভোগ করতে পারবেন।'
+                        question: 'কে এই ক্যাম্পেইনে অংশ নিতে পারবেন?',
+                        answer: 'যেকোনো গোল্ড কিনেন গ্রাহক, যিনি ১-৩১ অক্টোবর ২০২৫ তারিখের মধ্যে গোল্ড কিনেন অ্যাপের মাধ্যমে গোল্ড কিনবেন।'
                     },
                     {
-                        question: 'ক্যাশব্যাক অফারটি কী?',
-                        answer: 'গোল্ড কিনেন-এর সকল গ্রাহক ৩ সেপ্টেম্বর থেকে ৩ অক্টোবর ২০২৫ পর্যন্ত অটো গোল্ড সেভ প্ল্যান শুরু করলে টানা ৩ মাস ধরে প্রতিটি পেমেন্টে (প্রতি প্ল্যানে সর্বোচ্চ ১০০০ টাকা) ৫% ক্যাশব্যাক পাবেন।'
+                        question: 'বিজয়ী কিভাবে নির্ধারণ করা হবে?',
+                        answer: 'ক্যাম্পেইন সময়সীমার (১-৩১ অক্টোবর ২০২৫) মধ্যে ৩ জন শীর্ষ গ্রাহকের মোট গোল্ড ক্রয়ের পরিমাণের (গ্রাম অনুযায়ী) উপর ভিত্তি করে বিজয়ী নির্ধারণ করা হবে।'
                     },
                     {
-                        question: 'আমি কখন ক্যাশব্যাক পাব?',
-                        answer: 'প্রতি সফল পেমেন্টের পরবর্তী কর্মদিবসে আপনার অটো গোল্ড সেভ প্ল্যানের সাথে লিংক করা বিকাশ অ্যাকাউন্টে ক্যাশব্যাক জমা হবে।'
+                        question: 'ক্যাম্পেইনের ঘোষিত পুরস্কার-এর (iPhone-এর) স্পেসিফিকেশন কী কী?',
+                        answer: 'iPhone 17 Pro, 256 GB, সিঙ্গাপুর/অস্ট্রেলিয়ান ভ্যারিয়েন্ট (ডুয়াল সিম: e-SIM + Nano সিম)।<br>iPhone Air, 256 GB, সিঙ্গাপুর/অস্ট্রেলিয়ান ভ্যারিয়েন্ট (e-SIM)।<br>iPhone 17, 256 GB, সিঙ্গাপুর/অস্ট্রেলিয়ান ভ্যারিয়েন্ট (ডুয়াল সিম: e-SIM + Nano সিম)।'
+                    },
+                     {
+                        question: 'পুরস্কার হিসেবে দেওয়া iPhone-এ কি ওয়ারেন্টি থাকবে?',
+                        answer: 'হ্যাঁ। প্রতিটি iPhone-এর সাথে ১ বছরের আন্তর্জাতিক ওয়ারেন্টি থাকবে (Apple কর্তৃক প্রদত্ত)। অনুগ্রহ করে লক্ষ্য করুনঃ<br>- Gold Kinen কোনো আফটার-সেলস সার্ভিস, রিপ্লেসমেন্ট বা রিপেয়ার সেবা প্রদান করবে না।<br>- ওয়ারেন্টি দাবি করার জন্য বিজয়ীদেরকে সরাসরি Apple অনুমোদিত সার্ভিস সেন্টার-এ যোগাযোগ করতে হবে।<br>- <strong>পুরস্কার হ্যান্ডওভার অনুষ্ঠানের পর থেকে গোল্ড কিনেন-এর আর কোনো দায়বদ্ধতা থাকবে না।</strong>'
                     },
                     {
-                        question: 'সর্বোচ্চ ক্যাশব্যাকের কি কোনো সীমা আছে?',
-                        answer: 'হ্যাঁ। একজন ব্যবহারকারী ৩ মাসের জন্য প্রতিটি প্ল্যানে সর্বোচ্চ ১০০০ টাকা ক্যাশব্যাক পেতে পারেন। প্রতিটি প্ল্যানে সর্বোচ্চ মোট ক্যাশব্যাক ৩০০০ টাকা।'
+                        question: 'যদি দুইজন সমান পরিমাণ গোল্ড ক্রয় করেন তাহলে কী হবে?',
+                        answer: 'যদি কোনো দুজন শীর্ষ গ্রাহক একই পরিমাণ গোল্ড ক্রয় করে থাকেন, তাহলে যে গ্রাহক আগে ক্রয়ের পরিমাণ (তারিখ এবং সময় অনুসারে) পূর্ণ করেছেন তাকেই বিজয়ী হিসেবে বিবেচনা করা হবে।'
                     },
                     {
-                        question: 'আমাকে কি একটি নির্দিষ্ট অটো গোল্ড সেভ মেয়াদ নির্বাচন করতে হবে?',
-                        answer: 'হ্যাঁ। ক্যাশব্যাক পেতে হলে, ক্যাম্পেইন চলাকালীন (৩ সেপ্টেম্বর – ৩ অক্টোবর ২০২৫) ৩ মাস মেয়াদের একটি নতুন অটো গোল্ড সেভ প্ল্যান খুলতে হবে এবং পেমেন্ট করে সক্রিয় করতে হবে।'
+                        question: 'ন্যূনতম কত পরিমাণ গোল্ড কিনতে হবে?',
+                        answer: 'হ্যাঁ। সর্বনিম্ন গোল্ড ক্রয়ের পরিমাণ ৫০০ টাকা। তবে, বেশি পরিমাণে গোল্ড কিনলে গ্রাহকের জেতার সম্ভাবনা বেড়ে যাবে।'
                     },
                     {
-                        question: 'আমার যদি ইতিমধ্যেই একটি অটো গোল্ড সেভ প্ল্যান থাকে তাহলে কি আমি ক্যাশব্যাক পাব?',
-                        answer: 'না। এই অফারটি শুধুমাত্র ক্যাম্পেইন চলাকালীন খোলা নতুন অটো গোল্ড সেভ প্ল্যানের জন্য প্রযোজ্য।'
+                        question: 'বিজয়ীদের ঘোষণা কবে হবে?',
+                        answer: 'ক্যাম্পেইন শেষ হওয়ার আনুমানিক ৭ দিনের মধ্যে।'
                     },
                     {
-                        question: 'আমার অটো গোল্ড সেভ পেমেন্ট পরিশোধ ব্যর্থ হলে কী হবে?',
-                        answer: 'যদি আপনার নতুন অটো গোল্ড সেভ প্ল্যানে ৩ সেপ্টেম্বর – ৩ অক্টোবর ২০২৫ এর মধ্যে বিকাশ অটো পেমেন্ট ব্যর্থ হয়, তাহলে আপনি ক্যাম্পেইন চলাকালীন ক্যাশব্যাক পাওয়ার যোগ্য হবেন না।'
+                        question: 'বিজয়ীদের কীভাবে জানানো হবে?',
+                        answer: 'বিজয়ীদের গোল্ড কিনেন অ্যাপে ইন-অ্যাপ নোটিফিকেশন-এর মাধ্যমে এবং তাদের রেজিস্টারকৃত নম্বরে গোল্ড কিনেন-এর অফিসিয়াল কাস্টমার সার্ভিস নম্বর 09610964653 থেকে ফোন কলের মাধ্যমে জানানো হবে।'
                     },
                     {
-                        question: 'আমি কি একাধিক অটো গোল্ড সেভ প্ল্যান খুলতে পারি এবং সবগুলোতে ক্যাশব্যাক পেতে পারি?',
-                        answer: 'হ্যাঁ। ক্যাম্পেইন চলাকালীন খোলা ৩ মাস মেয়াদের প্রতিটি নতুন অটো গোল্ড সেভ প্ল্যান ক্যাশব্যাকের জন্য যোগ্য হবে, প্রতি প্ল্যানে ক্যাশব্যাক সীমা মাসিক ১০০০ টাকা সাপেক্ষে।'
+                        question: 'পুরস্কার কীভাবে প্রদান করা হবে?',
+                        answer: 'বিজয়ীরা তাদের পুরস্কার একটি রিওয়ার্ড হ্যান্ডওভার অনুষ্ঠানের মাধ্যমে পাবেন, যা নির্ধারিত তারিখ ও স্থানে অনুষ্ঠিত হবে (যা পরে ঘোষণা করা হবে)।'
+                    },
+                     {
+                        question: 'একজন গ্রাহক কি একাধিক পুরস্কার জিততে পারবেন?',
+                        answer: 'না। একজন গ্রাহক সর্বোচ্চ একটি পুরস্কার জিততে পারবেন।'
                     },
                     {
-                        question: 'আমি যদি ৩রা সেপ্টেম্বর থেকে ৩রা অক্টোবর-এর মধ্যে একটি অটো গোল্ড সেভ প্ল্যান খুলি কিন্তু আমার প্রথম পেমেন্ট ৩রা অক্টোবরের পরের জন্য নির্ধারিত হয় তাহলে কী হবে?',
-                        answer: 'যে অটো গোল্ড সেভ প্ল্যানগুলি ৩ সেপ্টেম্বর থেকে ৩ অক্টোবর ২০২৫ এর মধ্যে সক্রিয় করা হয়েছে এবং কমপক্ষে একটি সফল পেমেন্ট হয়েছে সেগুলিই ক্যাশব্যাক অফারের জন্য যোগ্য হবে।'
+                        question: 'এই ক্যাম্পেইনে কোনও গ্রাহক পুরস্কার পাওয়ার অযোগ্য হতে পারেন কি?',
+                        answer: 'অ্যাপে যেকোনো ধরণের প্রতারণামূলক কার্যকলাপে জড়িত হওয়া বা যেকোনোভাবে অ্যাপ অপব্যবহারকারী গ্রাহককে ক্যাম্পেইনে পুরস্কারের জন্য অযোগ্য বলে বিবেচনা করা যেতে পারে।'
                     },
                     {
-                        question: 'আমার বিকাশ অ্যাকাউন্টে ক্যাশব্যাক কীভাবে দেখাবে?',
-                        answer: 'আপনার বিকাশ লেনদেনের ইতিহাসে ক্যাশব্যাক সরাসরি ডিপোজিট হিসেবে দেখানো হবে।'
+                        question: 'সহায়তার জন্য আমি কোথায় যোগাযোগ করতে পারি?',
+                        answer: 'যেকোনো ধরণের সহায়তার জন্য, গ্রাহকরা প্রতিদিন সকাল ১০টা থেকে রাত ১০টার মধ্যে গোল্ড কিনেনের গ্রাহক পরিষেবা নম্বরে কল করতে পারেন। গ্রাহক পরিষেবা নম্বর: ০৯৬১০৯৬৪৬৫৩'
                     }
                 ],
                 terms: [
-                    'এই ক্যাম্পেইনটি ৩ সেপ্টেম্বর থেকে ৩ অক্টোবর, ২০২৫ পর্যন্ত চলবে।',
-                    'অফারটি শুধুমাত্র ৩ মাস মেয়াদের নতুন অটো গোল্ড সেভ প্ল্যানের জন্য প্রযোজ্য, যা ক্যাম্পেইন সময়ের মধ্যে খুলে, পেমেন্ট সম্পন্ন করে ক্যাশব্যাক উপভোগ করতে পারবেন গ্রাহক।',
-                    'ক্যাশব্যাক পাবার যোগ্য হতে, গ্রাহকদের ক্যাম্পেইন সময়কালে ৩ মাস মেয়াদী অটো গোল্ড সেভ প্ল্যান খুলে, পেমেন্ট সম্পন্ন করতে হবে।',
-                    'শুধুমাত্র ক্রয়কৃত গোল্ডের পরিমাণের উপর ক্যাশব্যাক প্রযোজ্য (অন্যান্য চার্জ নয়)।',
-                    'যেসব অটো গোল্ড সেভ প্ল্যান ক্যাম্পেইন সময়কালে কমপক্ষে একটি সফল পেমেন্ট করেছে, শুধুমাত্র তারাই ক্যাশব্যাকের জন্য যোগ্য হবে।',
-                    'গ্রাহকরা ৩ মাসের অটো গোল্ড সেভ পেমেন্ট সম্পন্ন করে ৫% ক্যাশব্যাক পাবেন, যা প্রতি প্ল্যানের প্রতি পেমেন্টে মাসিক সর্বোচ্চ ১০০০ টাকা পর্যন্ত সীমিত।',
-                    'যোগ্য অটো গোল্ড সেভ প্ল্যানের অধীনে প্রথম সফল পেমেন্টের তারিখ থেকে টানা ৩ মাসের জন্য ক্যাশব্যাক প্রযোজ্য।',
-                    'প্রতি প্ল্যানের সর্বোচ্চ ক্যাশব্যাকের সীমা ৩০০০ টাকা (প্রতি মাসে ১০০০ টাকা × ৩ মাস)।',
-                    'প্রতিটি সফল পেমেন্টের পরের কর্মদিবসে গ্রাহকের অটো গোল্ড সেভ প্ল্যানের সাথে লিংক করা বিকাশ অ্যাকাউন্টে ক্যাশব্যাক জমা হবে।',
-                    'যদি কোন পেমেন্ট পরিশোধ ব্যর্থ হয় (যেকোনো কারণে, বিকাশ অটো পেমেন্ট ব্যর্থতা সহ), তাহলে সেই মাসের ক্যাশব্যাক প্রদান করা হবে না।',
-                    'গ্রাহকরা একাধিক অটো গোল্ড সেভ প্ল্যান খুলতে পারেন এবং প্রতিটিতে ক্যাশব্যাক পেতে পারেন, প্ল্যানের মেয়াদ, মাসিক এবং প্রতি-প্ল্যান ক্যাশব্যাক সীমা সাপেক্ষে।',
-                    'এই অফারটি ৩ সেপ্টেম্বর থেকে ৩ অক্টোবর, ২০২৫ এর আগে খোলা বিদ্যমান অটো গোল্ড সেভ প্ল্যানের জন্য প্রযোজ্য নয়।',
-                    'গোল্ড কিনেন পূর্ব নোটিশ ছাড়াই যেকোনো সময় এই ক্যাম্পেইন সংশোধন, স্থগিত বা বাতিল করার অধিকার সংরক্ষণ করে।',
-                    'প্রতারণামূলক কার্যকলাপ, অপব্যবহার বা শর্ত লঙ্ঘনের ক্ষেত্রে, গোল্ড কিনেন যেকোনো গ্রাহককে এই অফার গ্রহণ থেকে অযোগ্য ঘোষণা করার অধিকার সংরক্ষণ করে।',
-                    'এই ক্যাম্পেইন থেকে উদ্ভূত সমস্ত বিবাদ বাংলাদেশের আইন অনুসারে সমাধান করা হবে এবং গোল্ড কিনেনের সিদ্ধান্ত চূড়ান্ত এবং বাধ্যতামূলক বলে বিবেচিত হবে।'
+                    'ক্যাম্পেইন ১-৩১ অক্টোবর ২০২৫, প্রতিদিন সকাল ১০:০০টা থেকে রাত ১১:৫৯টা পর্যন্ত চলবে।',
+                    'শুধুমাত্র গোল্ড কিনেন অ্যাপের মাধ্যমে সফলভাবে সম্পন্ন ক্রয়সমূহ গ্রহণযোগ্য হবে।',
+                    'ক্যাম্পেইন সময়সীমার মধ্যে (১-৩১ অক্টোবর ২০২৫) সর্বোচ্চ গোল্ড ক্রয়ের পরিমাণ (গ্রাম অনুযায়ী) অনুযায়ী বিজয়ী নির্ধারণ করা হবে।',
+                    'পুরস্কারের ওয়ারেন্টি ও সীমাবদ্ধতা: সব iPhone সিঙ্গাপুর/অস্ট্রেলিয়ান ভ্যারিয়েন্ট। প্রতিটি iPhone-এর সাথে ১ বছরের আন্তর্জাতিক ওয়ারেন্টি থাকবে (Apple কর্তৃক প্রদত্ত)। Gold Kinen দায়বদ্ধ থাকবে না: ওয়ারেন্টি বা সার্ভিসের আঞ্চলিক সীমাবদ্ধতার ক্ষেত্রে; কোনো আফটার-সেলস সার্ভিস, রিপ্লেসমেন্ট বা রিপেয়ার এর ক্ষেত্রে। ওয়ারেন্টি সংক্রান্ত সকল বিষয় শুধুমাত্র Apple অনুমোদিত সার্ভিস সেন্টার এর মাধ্যমে পরিচালিত হবে।',
+                    'সমান ক্রয়ের ক্ষেত্রে যেই গ্রাহক আগে সর্বোচ্চ পরিমাণ ক্রয় করবেন (তারিখ ও সময় অনুযায়ী), তিনি বিজয়ী হিসেবে গণ্য হবেন।',
+                    'শীর্ষ ৩ জন বিজয়ীর পুরস্কার কাঠামো: ১ম স্থান → iPhone 17 Pro [256GB], ২য় স্থান → iPhone Air [256GB], ৩য় স্থান → iPhone 17 [256GB]।',
+                    'একজন গ্রাহক সর্বোচ্চ একটি পুরস্কার জিততে পারবেন।',
+                    'ক্যাম্পেইন শেষ হওয়ার আনুমানিক ৭ দিনের মধ্যে, বিজয়ীদের গোল্ড কিনেন অ্যাপে ইন-অ্যাপ নোটিফিকেশন এবং গোল্ড কিনেন-এর অফিসিয়াল নাম্বার (09610964653) থেকে গ্রাহকের গোল্ড কিনেন অ্যাপে রেজিস্টারকৃত নম্বরে ফোন কলের মাধ্যমে জানানো হবে।',
+                    'যদি কোনো বিজয়ীর সাথে ৪৮ ঘণ্টার মধ্যে যোগাযোগ করা না যায়, তবে তিনি পুরস্কারের জন্য অযোগ্য বিবেচিত হতে পারেন।',
+                    'গ্রাহকের প্রাপ্য পুরষ্কার, একটি রিওয়ার্ড হ্যান্ডওভার অনুষ্ঠানে নির্ধারিত তারিখ ও স্থানে (যা পরে ঘোষণা করা হবে) প্রদান করা হবে।',
+                    'পুরস্কার হ্যান্ডওভার অনুষ্ঠানের পর থেকে গোল্ড কিনেন আর কোনোভাবে দায়বদ্ধ থাকবে না।',
+                    'ক্যাম্পেইনে অংশগ্রহণের মাধ্যমে বিজয়ীরা সম্মতি দেন যে তাদের নাম, ছবি ও পুরস্কারের তথ্য প্রচারণামূলক কাজে ব্যবহার করা যেতে পারে।',
+                    'কোনো প্রকার প্রতারণা বা অপব্যবহারের প্রমাণ পাওয়া গেলে গ্রাহককে ক্যাম্পেইনে অংশগ্রহণের জন্য অযোগ্য ঘোষণা করা হবে।',
+                    'গোল্ড কিনেন কর্মচারী এবং তাঁদের নিকট আত্মীয়রা এই ক্যাম্পেইনে অংশগ্রহণের যোগ্য নন।',
+                    'গোল্ড কিনেন পূর্ব ঘোষণা ছাড়াই ক্যাম্পেইন পরিবর্তন করার অধিকার সংরক্ষণ করে।',
+                    'যেকোনো বিবাদ বাংলাদেশের আইন অনুযায়ী নিষ্পত্তি হবে এবং গোল্ড কিনেনের সিদ্ধান্তই চূড়ান্ত হবে।'
                 ]
             }
         };
@@ -1038,31 +1025,29 @@
             const lang = translations[currentLang];
             
             document.getElementById('langText').textContent = lang.langText;
-            // document.getElementById('campaignPeriod').innerHTML = `<i class="fas fa-calendar-alt"></i> ${lang.campaignPeriod}`;
-            document.getElementById('detailsTitle').textContent = lang.detailsTitle;
-            // document.getElementById('eligibilityTitle').textContent = lang.eligibilityTitle;
+            document.getElementById('campaignTitle').textContent = lang.campaignTitle;
+            document.getElementById('campaignSubtitle').textContent = lang.campaignSubtitle;
+            document.getElementById('prizeTitle').textContent = lang.prizeTitle;
+            document.getElementById('prize1stPlace').textContent = lang.prize1stPlace;
+            document.getElementById('prize1Name').textContent = lang.prize1Name;
+            document.getElementById('prize1details').innerHTML = lang.prize1details;
+            document.getElementById('prize2ndPlace').textContent = lang.prize2ndPlace;
+            document.getElementById('prize2Name').textContent = lang.prize2Name;
+            document.getElementById('prize2details').innerHTML = lang.prize2details;
+            document.getElementById('prize3rdPlace').textContent = lang.prize3rdPlace;
+            document.getElementById('prize3Name').textContent = lang.prize3Name;
+            document.getElementById('prize3details').innerHTML = lang.prize3details;
+            document.getElementById('howToTitle').textContent = lang.howToTitle;
+            document.getElementById('howToDesc').textContent = lang.howToDesc;
+            document.getElementById('eligibilityTitle').textContent = lang.eligibilityTitle;
             document.getElementById('eligibilityDesc').textContent = lang.eligibilityDesc;
-            document.getElementById('cashbackTitle').textContent = lang.cashbackTitle;
-            document.getElementById('cashbackDesc').textContent = lang.cashbackDesc;
-            document.getElementById('maxCashbackTitle').textContent = lang.maxCashbackTitle;
-            document.getElementById('maxCashbackDesc').textContent = lang.maxCashbackDesc;
-            document.getElementById('tenureTitle').textContent = lang.tenureTitle;
-            document.getElementById('tenureDesc').textContent = lang.tenureDesc;
-            document.getElementById('exclusionsTitle').textContent = lang.exclusionsTitle;
-            document.getElementById('exclusionsDesc').textContent = lang.exclusionsDesc;
-            document.getElementById('multiplePlansTitle').textContent = lang.multiplePlansTitle;
-            document.getElementById('multiplePlansDesc').textContent = lang.multiplePlansDesc;
-            document.getElementById('paymentFailureTitle').textContent = lang.paymentFailureTitle;
-            document.getElementById('paymentFailureDesc').textContent = lang.paymentFailureDesc;
-            document.getElementById('disbursementTitle').textContent = lang.disbursementTitle;
-            document.getElementById('disbursementDesc').textContent = lang.disbursementDesc;
-            document.getElementById('exampleTitle').textContent = lang.exampleTitle;
-            document.getElementById('exampleText').textContent = lang.exampleText;
-            document.getElementById('faqTitle').textContent = lang.faqTitle;
+            document.getElementById('winnerSelectionTitle').textContent = lang.winnerSelectionTitle;
+            document.getElementById('winnerSelectionDesc').textContent = lang.winnerSelectionDesc;
+            document.getElementById('howItWorksTitle').textContent = lang.howItWorksTitle;
             document.getElementById('termsTitle').textContent = lang.termsTitle;
+            document.getElementById('faqTitle').textContent = lang.faqTitle;
             document.getElementById('ctaImage').src = lang.ctaImagePath;
             document.getElementById('youtubeVideo').src = lang.youtubeVideoUrl;
-            document.getElementById('howItWorksTitle').textContent = lang.howItWorksTitle;
         }
 
         // Generate FAQ accordion
@@ -1093,8 +1078,6 @@
             return String(num).replace(/\d/g, digit => bengaliDigits[digit]);
         }
 
-
-        // 2. REPLACE your old generateTerms function with this updated one
         function generateTerms() {
             const termsList = document.getElementById('termsList');
             const lang = translations[currentLang];
@@ -1102,14 +1085,12 @@
             termsList.innerHTML = ''; // Clear previous items
             
             lang.terms.forEach((term, index) => {
-                // Check the current language and convert the number if it's Bengali
                 const termNumber = (currentLang === 'bn')
                     ? toBengaliNumerals(index + 1)
                     : (index + 1);
 
                 const item = document.createElement('li');
                 item.className = 'terms-item';
-                // Use the correctly formatted number in the output
                 item.innerHTML = `<span class="terms-number">${termNumber}.</span>${term}`;
                 termsList.appendChild(item);
             });
@@ -1133,22 +1114,18 @@
             }
         }
 
-        // --- NEW: Function to set up the floating contact button ---
         function setupContactButton() {
             const contactFab = document.getElementById('contact-fab');
             const fabIcon = document.getElementById('fab-icon');
             
-            // Simple check for mobile device
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
             if (isMobile) {
-                // For mobile, set to call
-                contactFab.href = 'tel:+8809610964653'; //
+                contactFab.href = 'tel:+8809610964653';
                 fabIcon.className = 'fas fa-phone-alt fab-icon';
             } else {
-                // For desktop, set to Messenger
-                contactFab.href = 'https://m.me/goldkinen'; //
-                contactFab.target = '_blank'; // Open in a new tab
+                contactFab.href = 'https://m.me/goldkinen';
+                contactFab.target = '_blank';
                 fabIcon.className = 'fab fa-facebook-messenger fab-icon';
             }
         }
