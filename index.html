@@ -319,6 +319,17 @@
             line-height: 1.6;
         }
         
+        .feature-card .feature-description ul {
+            text-align: left;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+
+        .feature-card .feature-description li {
+            margin-bottom: 0.6rem;
+        }
+
         .prize-title {
             font-size: 1.5rem;
             font-weight: 700;
@@ -378,6 +389,17 @@
         .highlight-text {
             font-size: 1.1rem;
             font-weight: 500;
+        }
+        
+        .highlight-text ul {
+            text-align: left;
+            padding-left: 1.5rem; /* Adjust padding for visual centering */
+            max-width: 90%; /* Control width */
+            margin: 0.5rem auto 0; /* Center the list block */
+        }
+        
+        .highlight-text li {
+            margin-bottom: 0.8rem;
         }
 
         /* FAQ Accordion */
@@ -786,8 +808,8 @@
             <div class="highlight-box">
                 <div class="highlight-content">
                     <h3 class="highlight-title lang-content" id="winnerSelectionTitle">Winner Selection</h3>
-                    <p class="highlight-text lang-content" id="winnerSelectionDesc">
-                    </p>
+                    <div class="highlight-text lang-content" id="winnerSelectionDesc">
+                    </div>
                 </div>
             </div>
 
@@ -796,14 +818,14 @@
                 <div class="feature-card">
                     <i class="fas fa-bell feature-icon"></i>
                     <h3 class="feature-title lang-content" id="notificationTitle">Notification & Delivery</h3>
-                    <p class="feature-description lang-content" id="notificationDesc">
-                    </p>
+                    <div class="feature-description lang-content" id="notificationDesc">
+                    </div>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-info-circle feature-icon"></i>
                     <h3 class="feature-title lang-content" id="additionalInfoTitle">Additional Information</h3>
-                    <p class="feature-description lang-content" id="additionalInfoDesc">
-                    </p>
+                    <div class="feature-description lang-content" id="additionalInfoDesc">
+                    </div>
                 </div>
             </div>
 
@@ -885,11 +907,22 @@
                 eligibilityTitle: 'Eligibility',
                 eligibilityDesc: 'Only Gold Kinen app users, purchasing gold during the campaign period with the Gold Kinen app will be considered eligible. Winners will be determined by the highest gold purchase volume (in grams) within the campaign period, 1-31 October 2025.',
                 winnerSelectionTitle: 'Selection of Winners',
-                winnerSelectionDesc: 'During the campaign period 1-31 October 2025, the top 3 highest gold purchasing customers will be selected for the prize(s), based on the total amount of gold purchased (in grams) by the customer. This can be a single purchase by the customer or the combined amount of multiple purchases during the campaign. Customers will be ranked by the total gold purchase volume within the campaign period. The 1st, 2nd, and 3rd highest purchasers will win the respective prizes - iPhone 17 Pro [256GB], iPhone Air [256GB] and iPhone 17 [256GB]. In case of a tie in purchase volume, the customer who reaches the highest purchase volume earlier (by date and time) will be considered the winner.',
+                winnerSelectionDesc: `<ul>
+                                        <li>During the campaign period 1-31 October 2025, the top 3 highest gold purchasing customers will be selected for the prize(s), based on the total amount of gold purchased (in grams) by the customer. This can be a single purchase by the customer or the combined amount of multiple purchases during the campaign.</li>
+                                        <li>The 1st, 2nd, and 3rd highest purchasers will win the respective prizes - iPhone 17 Pro [256GB], iPhone Air [256GB] and iPhone 17 [256GB].</li>
+                                        <li>In case of a tie in purchase volume, the customer who reaches the highest purchase volume earlier (by date and time) will be considered the winner.</li>
+                                      </ul>`,
                 notificationTitle: 'Notification & Delivery',
-                notificationDesc: 'Winners will be contacted within approximately 7 days after the campaign ends, through an in-app notification and a phone call from Gold Kinen’s official Customer Service number 09610964653. If a winner cannot be reached within 48 hours, they may be disqualified. In such case, the next highest purchasing user will be considered for the reward. The prizes will be awarded at a designated location, on a date to be announced later, in a prize giving ceremony. The details will be shared by Gold Kinen’s official Customer Service number 09610964653.',
+                notificationDesc: `<ul>
+                                        <li>Winners will be contacted within approximately 7 days after the campaign ends, through an in-app notification and a phone call from Gold Kinen’s official Customer Service number 09610964653.</li>
+                                        <li>If a winner cannot be reached within 48 hours, they may be disqualified. In such case, the next highest purchasing user will be considered for the reward.</li>
+                                        <li>The prizes will be awarded at a designated location, on a date to be announced later, in a prize giving ceremony.</li>
+                                   </ul>`,
                 additionalInfoTitle: 'Additional Information',
-                additionalInfoDesc: 'By participating, winners agree that their name, photo, and prize information may be used for campaign-related promotional purposes. Any form of fraud or abuse will lead to disqualification.',
+                additionalInfoDesc: `<ul>
+                                        <li>By participating, winners agree that their name, photo, and prize information may be used for campaign-related promotional purposes.</li>
+                                        <li>Any form of fraud or abuse will lead to disqualification.</li>
+                                     </ul>`,
                 howItWorksTitle: 'How to Buy Gold',
                 termsTitle: 'Terms & Conditions',
                 faqTitle: 'Frequently Asked Questions',
@@ -983,11 +1016,22 @@
                 eligibilityTitle: 'যোগ্যতা',
                 eligibilityDesc: 'শুধুমাত্র গোল্ড কিনেন অ্যাপে সফলভাবে সম্পন্ন করা ক্রয়, যোগ্য বিবেচিত হবে। ক্যাম্পেইন সময়সীমার মধ্যে (১-৩১ অক্টোবর ২০২৫ পর্যন্ত) সর্বোচ্চ গোল্ড ক্রয়ের পরিমাণ (গ্রাম) অনুযায়ী বিজয়ী নির্ধারণ করা হবে।',
                 winnerSelectionTitle: 'বিজয়ী নির্বাচন',
-                winnerSelectionDesc: 'ক্যাম্পেইন সময়সীমার মধ্যে একজন গ্রাহকের মোট গোল্ড ক্রয়ের পরিমাণ (গ্রাম অনুযায়ী) অনুযায়ী তালিকা করে, ৩ জন সর্বোচ্চ পরিমাণ গোল্ড ক্রয়কারী গ্রাহক পুরস্কারের জন্য নির্বাচিত হবেন। যা ক্যাম্পেইন চলাকালীন সময়ে একজন গ্রাহকের একক ক্রয় অথবা একাধিক ক্রয়ের সম্মিলিত পরিমাণ হতে পারে। ১ম, ২য় এবং ৩য় সর্বোচ্চ পরিমাণ গোল্ড ক্রয়কারী গ্রাহক পুরস্কার জিতবেন। যদি কোন দুইজন সর্বোচ্চ ক্রয়কারী গ্রাহক সমান পরিমাণ গোল্ড ক্রয় করেন, তবে যে গ্রাহক আগে সেই ক্রয় পরিমাণে পৌঁছাবেন (তারিখ ও সময় অনুযায়ী), তাকে বিজয়ী হিসেবে গণ্য করা হবে।',
+                winnerSelectionDesc: `<ul>
+                                        <li>ক্যাম্পেইন সময়সীমার মধ্যে একজন গ্রাহকের মোট গোল্ড ক্রয়ের পরিমাণ (গ্রাম অনুযায়ী) অনুযায়ী তালিকা করে, ৩ জন সর্বোচ্চ পরিমাণ গোল্ড ক্রয়কারী গ্রাহক পুরস্কারের জন্য নির্বাচিত হবেন। যা ক্যাম্পেইন চলাকালীন সময়ে একজন গ্রাহকের একক ক্রয় অথবা একাধিক ক্রয়ের সম্মিলিত পরিমাণ হতে পারে।</li>
+                                        <li>১ম, ২য় এবং ৩য় সর্বোচ্চ পরিমাণ গোল্ড ক্রয়কারী গ্রাহক পুরস্কার জিতবেন।</li>
+                                        <li>যদি কোন দুইজন সর্বোচ্চ ক্রয়কারী গ্রাহক সমান পরিমাণ গোল্ড ক্রয় করেন, তবে যে গ্রাহক আগে সেই ক্রয় পরিমাণে পৌঁছাবেন (তারিখ ও সময় অনুযায়ী), তাকে বিজয়ী হিসেবে গণ্য করা হবে।</li>
+                                      </ul>`,
                 notificationTitle: 'নোটিফিকেশান ও ডেলিভারি',
-                notificationDesc: 'ক্যাম্পেইন শেষ হওয়ার আনুমানিক ৭ দিনের মধ্যে, বিজয়ীদের ইন-অ্যাপ নোটিফিকেশন এবং গোল্ড কিনেনের অফিসিয়াল কাস্টমার সার্ভিস নাম্বার 09610964653 থেকে তাদের গোল্ড কিনেন অ্যাপে রেজিস্টারকৃত ফোন নাম্বারে কলের মাধ্যমে জানানো হবে। যদি কোনো বিজয়ীর সাথে ৪৮ ঘণ্টার মধ্যে যোগাযোগ করা না যায়, তবে তিনি পুরস্কার থেকে অযোগ্য বিবেচিত হতে পারেন। বিজয়ী গ্রাহকদের নির্ধারিত তারিখ এবং স্থানে (যা পরে ঘোষণা করা হবে) একটি রিওয়ার্ড হ্যান্ডওভার অনুষ্ঠানের মাধ্যমে পুরস্কার প্রদান করা হবে।',
+                notificationDesc: `<ul>
+                                        <li>ক্যাম্পেইন শেষ হওয়ার আনুমানিক ৭ দিনের মধ্যে, বিজয়ীদের ইন-অ্যাপ নোটিফিকেশন এবং গোল্ড কিনেনের অফিসিয়াল কাস্টমার সার্ভিস নাম্বার 09610964653 থেকে তাদের গোল্ড কিনেন অ্যাপে রেজিস্টারকৃত ফোন নাম্বারে কলের মাধ্যমে জানানো হবে।</li>
+                                        <li>যদি কোনো বিজয়ীর সাথে ৪৮ ঘণ্টার মধ্যে যোগাযোগ করা না যায়, তবে তিনি পুরস্কার থেকে অযোগ্য বিবেচিত হতে পারেন।</li>
+                                        <li>বিজয়ী গ্রাহকদের নির্ধারিত তারিখ এবং স্থানে (যা পরে ঘোষণা করা হবে) একটি রিওয়ার্ড হ্যান্ডওভার অনুষ্ঠানের মাধ্যমে পুরস্কার প্রদান করা হবে।</li>
+                                   </ul>`,
                 additionalInfoTitle: 'অতিরিক্ত তথ্য',
-                additionalInfoDesc: 'উক্ত ক্যাম্পেইনে অংশগ্রহণের মাধ্যমে বিজয়ীরা সম্মতি দিচ্ছেন যে তাদের নাম, ছবি ও পুরস্কারের তথ্য প্রচারণামূলক কাজে ব্যবহার করা যেতে পারে। কোনো প্রকার প্রতারণা বা অপব্যবহার-প্রবন গ্রাহককে ক্যাম্পেইনে অংশগ্রহণ করা থেকে অযোগ্য বিবেচিত করা হবে।',
+                additionalInfoDesc: `<ul>
+                                        <li>উক্ত ক্যাম্পেইনে অংশগ্রহণের মাধ্যমে বিজয়ীরা সম্মতি দিচ্ছেন যে তাদের নাম, ছবি ও পুরস্কারের তথ্য প্রচারণামূলক কাজে ব্যবহার করা যেতে পারে।</li>
+                                        <li>কোনো প্রকার প্রতারণা বা অপব্যবহার-প্রবন গ্রাহককে ক্যাম্পেইনে অংশগ্রহণ করা থেকে অযোগ্য বিবেচিত করা হবে।</li>
+                                     </ul>`,
                 howItWorksTitle: 'কিভাবে গোল্ড ক্রয় করবেন',
                 termsTitle: 'শর্তাবলী',
                 faqTitle: 'সাধারণ জিজ্ঞাসা',
