@@ -532,6 +532,33 @@
             font-size: 24px;
             color: var(--primary-navy);
         }
+
+        .sticky-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+        .sticky-button {
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .download-buttons {
+            position: absolute;
+            bottom: 20%;
+            left: 68%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .download-button img {
+            height: 60px;
+        }
         /* --- END: Floating Action Button Styles --- */
 
         /* --- Responsive YouTube Video Embed Styles --- */
@@ -743,7 +770,7 @@
         <!-- YOUTUBE VIDEO SECTION -->
         <section class="content-section">
             <div class="container">
-                <h2 class="section-title lang-content" id="howItWorksTitle">Learn About Buying Gold</h2>
+                <h2 class="section-title lang-content" id="howItWorksTitle">How to Buy Gold</h2>
                 <div class="video-responsive-wrapper">
                     <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/watch?v=Xwe8HR2P-GU&list=PLJSqcChSTA58bXP8qqd8l1fbKm4YYfGpw&index=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
@@ -785,6 +812,15 @@
         <i id="fab-icon" class="fab-icon"></i>
     </a>
 
+    <div class="sticky-container">
+        <a href="https://goldkinen.onelink.me/tNdw/w0lpxla1" class="sticky-button download-button">
+            <img src="./BKB-play-store 1.png" alt="Google Play">
+        </a>
+        <a href="https://goldkinen.onelink.me/tNdw/w0lpxla1" class="sticky-button download-button">
+            <img src="./BKB-app-store 1.png" alt="App Store">
+        </a>
+    </div>
+
     <script>
         // Language data
         const translations = {
@@ -803,12 +839,12 @@
                 prize3Name: 'iPhone 17 [256GB]',
                 prize3details: '(3rd highest purchaser)',
                 howToTitle: 'How to Participate',
-                howToDesc: 'Buy gold on the Gold Kinen app from 1-31 October 2025. Only successful purchases made with the Gold Kinen app will be considered eligible.',
+                howToDesc: 'Buy gold on the Gold Kinen app from 1-31 October 2025. Only successful purchases made with the Gold Kinen app will be eligible.',
                 eligibilityTitle: 'Eligibility',
                 eligibilityDesc: 'Only Gold Kinen app users, purchasing gold during the campaign period with the Gold Kinen app will be considered eligible. Winners will be determined by the highest gold purchase volume (in grams) within the campaign period, 1-31 October 2025.',
                 winnerSelectionTitle: 'Selection of Winners',
                 winnerSelectionDesc: 'During the campaign period 1-31 October 2025, the top 3 highest gold purchasing customers will be selected for the prize(s), based on the total amount of gold purchased (in grams) by the customer. This can be a single purchase by the customer or the combined amount of multiple purchases during the campaign. In case of a tie in purchase volume, the customer who reaches the highest purchase volume earlier (by date and time) will be considered the winner.',
-                howItWorksTitle: 'Learn About Buying Gold',
+                howItWorksTitle: 'How to Buy Gold',
                 termsTitle: 'Terms & Conditions',
                 faqTitle: 'Frequently Asked Questions',
                 ctaImagePath: './CTA-EN.png',
@@ -824,7 +860,7 @@
                     },
                     {
                         question: 'What are the specifications of the rewards of the campaign?',
-                        answer: 'iPhone 17 Pro, 256 GB, Singapore/Australian variant (Dual SIM: e-SIM + physical SIM).<br>iPhone Air, 256 GB, Singapore/Australian variant (e-SIM).<br>iPhone 17, 256 GB, Singapore/Australian variant (Dual SIM: e-SIM + physical SIM).'
+                        answer: 'iPhone 17 Pro, 256 GB, Singapore/Australian variant (Dual SIM: e-SIM + nano SIM).<br>iPhone Air, 256 GB, Singapore/Australian variant (e-SIM).<br>iPhone 17, 256 GB, Singapore/Australian variant (Dual SIM: e-SIM + nano SIM).'
                     },
                      {
                         question: 'Will the prizes have a warranty?',
@@ -865,11 +901,11 @@
                 ],
                 terms: [
                     'The campaign will run from 1-31 October 2025, daily from 10:00 AM to 11:59 PM.',
-                    'Only purchases made using the Gold Kinen app during this period are eligible.',
+                    'Only purchases made using the Gold Kinen app during this campaign period are eligible.',
                     'Winners will be determined by the total gold purchase volume (grams) within the campaign period.',
                     'In the event of a tie, the customer who reached the purchase volume earlier (date and time) will be declared the winner.',
                     'The top 3 winners will receive the prizes as follows: 1st → iPhone 17 Pro [256GB], 2nd → iPhone Air [256GB], 3rd → iPhone 17 [256GB].',
-                    'Warranty & Limitations: All iPhones are Singapore/Australian variants. Each iPhone comes with a 1-year international warranty provided by Apple. Gold Kinen will not be responsible for: Regional limitations of warranty/service coverage. Any after-sales service, replacement, or repair. Winners must contact Apple-authorized service providers for any warranty claims.',
+                    'Warranty & Limitations: All iPhones are Singapore/Australian variants. Each iPhone comes with a 1-year international warranty provided by Apple. Gold Kinen will not be responsible for - regional limitations of warranty/service coverage, any after-sales service, replacement, or repair. Winners must contact Apple-authorized service providers for any warranty claims.',
                     'Each customer may only win one prize.',
                     'Winners will be contacted via in-app notification and a phone call from Gold Kinen’s official Customer Service number 09610964653 within approximately 7 days after the campaign ends.',
                     'If a winner cannot be contacted within 48 hours, Gold Kinen reserves the right to disqualify them.',
@@ -902,7 +938,7 @@
                 eligibilityDesc: 'শুধুমাত্র গোল্ড কিনেন অ্যাপে সফলভাবে সম্পন্ন করা ক্রয়, যোগ্য বিবেচিত হবে। ক্যাম্পেইন সময়সীমার মধ্যে (১-৩১ অক্টোবর ২০২৫ পর্যন্ত) সর্বোচ্চ গোল্ড ক্রয়ের পরিমাণ (গ্রাম) অনুযায়ী বিজয়ী নির্ধারণ করা হবে।',
                 winnerSelectionTitle: 'বিজয়ী নির্বাচন',
                 winnerSelectionDesc: 'ক্যাম্পেইন সময়সীমার মধ্যে একজন গ্রাহকের মোট গোল্ড ক্রয়ের পরিমাণ (গ্রাম অনুযায়ী) অনুযায়ী তালিকা করে, ৩ জন সর্বোচ্চ পরিমাণ গোল্ড ক্রয়কারী গ্রাহক পুরস্কারের জন্য নির্বাচিত হবেন। যা ক্যাম্পেইন চলাকালীন সময়ে একজন গ্রাহকের একক ক্রয় অথবা একাধিক ক্রয়ের সম্মিলিত পরিমাণ হতে পারে। যদি কোন দুইজন সর্বোচ্চ ক্রয়কারী গ্রাহক সমান পরিমাণ গোল্ড ক্রয় করেন, তবে যে গ্রাহক আগে সেই ক্রয় পরিমাণে পৌঁছাবেন (তারিখ ও সময় অনুযায়ী), তাকে বিজয়ী হিসেবে গণ্য করা হবে।',
-                howItWorksTitle: 'গোল্ড ক্রয় সম্পর্কে জানুন',
+                howItWorksTitle: 'কিভাবে গোল্ড ক্রয় করবেন',
                 termsTitle: 'Terms & Conditions',
                 faqTitle: 'সাধারণ জিজ্ঞাসা',
                 ctaImagePath: './CTA-BN.png',
@@ -922,7 +958,7 @@
                     },
                      {
                         question: 'পুরস্কার হিসেবে দেওয়া iPhone-এ কি ওয়ারেন্টি থাকবে?',
-                        answer: 'হ্যাঁ। প্রতিটি iPhone-এর সাথে ১ বছরের আন্তর্জাতিক ওয়ারেন্টি থাকবে (Apple কর্তৃক প্রদত্ত)। অনুগ্রহ করে লক্ষ্য করুনঃ<br>- Gold Kinen কোনো আফটার-সেলস সার্ভিস, রিপ্লেসমেন্ট বা রিপেয়ার সেবা প্রদান করবে না।<br>- ওয়ারেন্টি দাবি করার জন্য বিজয়ীদেরকে সরাসরি Apple অনুমোদিত সার্ভিস সেন্টার-এ যোগাযোগ করতে হবে।<br>- <strong>পুরস্কার হ্যান্ডওভার অনুষ্ঠানের পর থেকে গোল্ড কিনেন-এর আর কোনো দায়বদ্ধতা থাকবে না।</strong>'
+                        answer: 'হ্যাঁ। প্রতিটি iPhone-এর সাথে ১ বছরের আন্তর্জাতিক ওয়ারেন্টি থাকবে (Apple কর্তৃক প্রদত্ত)। অনুগ্রহ করে লক্ষ্য করুনঃ<br>- Gold Kinen কোনো আফটার-সেলস সার্ভিস, রিপ্লেসমেন্ট বা রিপেয়ার সেবা প্রদান করবে না।<br>- ওয়ারেন্টি দাবি করার জন্য বিজয়ীদেরকে সরাসরি Apple অনুমোদিত সার্ভিস সেন্টার-এ যোগাযোগ করতে হবে।<br>- পুরস্কার হ্যান্ডওভার অনুষ্ঠানের পর থেকে গোল্ড কিনেন-এর আর কোনো দায়বদ্ধতা থাকবে না।'
                     },
                     {
                         question: 'যদি দুইজন সমান পরিমাণ গোল্ড ক্রয় করেন তাহলে কী হবে?',
